@@ -1,0 +1,471 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY untitled-ontology-6 "http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#"
+     xml:base="http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:untitled-ontology-6="http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#conecta_con -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-6;conecta_con">
+        <rdfs:range rdf:resource="&untitled-ontology-6;linea"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-6;linea"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#parada_fin -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-6;parada_fin">
+        <rdfs:range rdf:resource="&untitled-ontology-6;Parada"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-6;itinerario"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#parada_inicio -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-6;parada_inicio">
+        <rdfs:range rdf:resource="&untitled-ontology-6;Parada"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-6;itinerario"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#situado_en -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-6;situado_en">
+        <rdfs:range rdf:resource="&untitled-ontology-6;Parada"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-6;localizacion"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#tiene_horario -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-6;tiene_horario">
+        <rdfs:domain rdf:resource="&untitled-ontology-6;Horario"/>
+        <rdfs:range rdf:resource="&untitled-ontology-6;itinerario"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#tiene_itinerario -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-6;tiene_itinerario">
+        <rdfs:range rdf:resource="&untitled-ontology-6;Bus"/>
+        <rdfs:range rdf:resource="&untitled-ontology-6;Metro"/>
+        <rdfs:range rdf:resource="&untitled-ontology-6;Tren"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-6;itinerario"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#tiene_linea -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-6;tiene_linea">
+        <rdfs:range rdf:resource="&untitled-ontology-6;Bus"/>
+        <rdfs:range rdf:resource="&untitled-ontology-6;Metro"/>
+        <rdfs:range rdf:resource="&untitled-ontology-6;Tren"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-6;linea"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#tiene_parada -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-6;tiene_parada">
+        <rdfs:domain rdf:resource="&untitled-ontology-6;Parada"/>
+        <rdfs:range rdf:resource="&untitled-ontology-6;itinerario"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#codigo_linea -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-6;codigo_linea">
+        <rdfs:domain rdf:resource="&untitled-ontology-6;linea"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#coordenadas -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-6;coordenadas">
+        <rdfs:domain rdf:resource="&untitled-ontology-6;localizacion"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#dias_festivos -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-6;dias_festivos">
+        <rdfs:domain rdf:resource="&untitled-ontology-6;itinerario"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#frecuencia -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-6;frecuencia">
+        <rdfs:domain rdf:resource="&untitled-ontology-6;itinerario"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#hora_fin -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-6;hora_fin">
+        <rdfs:domain rdf:resource="&untitled-ontology-6;Horario"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#hora_inicio -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-6;hora_inicio">
+        <rdfs:domain rdf:resource="&untitled-ontology-6;Horario"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#id -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-6;id">
+        <rdfs:domain rdf:resource="&untitled-ontology-6;Bus"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-6;Metro"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-6;Tren"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#numero_asientos -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-6;numero_asientos">
+        <rdfs:domain rdf:resource="&untitled-ontology-6;Bus"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-6;Metro"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-6;Tren"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#numero_parada -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-6;numero_parada">
+        <rdfs:domain rdf:resource="&untitled-ontology-6;Parada"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#permite_bicicletas -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-6;permite_bicicletas">
+        <rdfs:domain rdf:resource="&untitled-ontology-6;Bus"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-6;Metro"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-6;Tren"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#precio -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-6;precio">
+        <rdfs:domain rdf:resource="&untitled-ontology-6;itinerario"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#Bus -->
+
+    <owl:Class rdf:about="&untitled-ontology-6;Bus"/>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#Horario -->
+
+    <owl:Class rdf:about="&untitled-ontology-6;Horario"/>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#Horario_festivo -->
+
+    <owl:Class rdf:about="&untitled-ontology-6;Horario_festivo">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-6;Horario"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#Horario_laboral -->
+
+    <owl:Class rdf:about="&untitled-ontology-6;Horario_laboral">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-6;Horario"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#Metro -->
+
+    <owl:Class rdf:about="&untitled-ontology-6;Metro"/>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#Parada -->
+
+    <owl:Class rdf:about="&untitled-ontology-6;Parada"/>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#ParadaExterna -->
+
+    <owl:Class rdf:about="&untitled-ontology-6;ParadaExterna">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-6;Parada"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#ParadaInterna -->
+
+    <owl:Class rdf:about="&untitled-ontology-6;ParadaInterna">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-6;Parada"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#Tren -->
+
+    <owl:Class rdf:about="&untitled-ontology-6;Tren"/>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#itinerario -->
+
+    <owl:Class rdf:about="&untitled-ontology-6;itinerario"/>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#linea -->
+
+    <owl:Class rdf:about="&untitled-ontology-6;linea"/>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#localizacion -->
+
+    <owl:Class rdf:about="&untitled-ontology-6;localizacion"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#591_Aluche-Montegancedo -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-6;591_Aluche-Montegancedo">
+        <rdf:type rdf:resource="&untitled-ontology-6;Bus"/>
+        <permite_bicicletas rdf:datatype="&xsd;boolean">false</permite_bicicletas>
+        <numero_asientos>72</numero_asientos>
+        <id>B-1000-ccc</id>
+        <tiene_itinerario rdf:resource="&untitled-ontology-6;aluche-montegancedo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#Aluche -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-6;Aluche">
+        <rdf:type rdf:resource="&untitled-ontology-6;ParadaExterna"/>
+        <numero_parada>1000</numero_parada>
+        <situado_en rdf:resource="&untitled-ontology-6;localizacion_aluche"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#Avenida_de_los_poblados -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-6;Avenida_de_los_poblados">
+        <rdf:type rdf:resource="&untitled-ontology-6;ParadaExterna"/>
+        <numero_parada>1001
+</numero_parada>
+        <situado_en rdf:resource="&untitled-ontology-6;localizacion_av_poblados"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#Carretera_de_Carabanchel -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-6;Carretera_de_Carabanchel">
+        <rdf:type rdf:resource="&untitled-ontology-6;ParadaExterna"/>
+        <numero_parada>1002</numero_parada>
+        <situado_en rdf:resource="&untitled-ontology-6;loc_ctr_carabanchel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#Centro_de_Empresas -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-6;Centro_de_Empresas">
+        <rdf:type rdf:resource="&untitled-ontology-6;ParadaExterna"/>
+        <numero_parada>1003
+</numero_parada>
+        <situado_en rdf:resource="&untitled-ontology-6;loca_centro_Empresas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#ETSIInf -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-6;ETSIInf">
+        <rdf:type rdf:resource="&untitled-ontology-6;ParadaExterna"/>
+        <numero_parada>1004
+</numero_parada>
+        <situado_en rdf:resource="&untitled-ontology-6;loc_etsiinf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#Horario_Festivo:591 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-6;Horario_Festivo:591">
+        <rdf:type rdf:resource="&untitled-ontology-6;Horario_festivo"/>
+        <hora_fin>19:00</hora_fin>
+        <hora_inicio>10:00</hora_inicio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#aluche-montegancedo -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-6;aluche-montegancedo">
+        <rdf:type rdf:resource="&untitled-ontology-6;itinerario"/>
+        <frecuencia>1800</frecuencia>
+        <precio>2.20e</precio>
+        <tiene_parada rdf:resource="&untitled-ontology-6;Aluche"/>
+        <parada_inicio rdf:resource="&untitled-ontology-6;Aluche"/>
+        <tiene_parada rdf:resource="&untitled-ontology-6;Avenida_de_los_poblados"/>
+        <tiene_parada rdf:resource="&untitled-ontology-6;Carretera_de_Carabanchel"/>
+        <tiene_parada rdf:resource="&untitled-ontology-6;Centro_de_Empresas"/>
+        <parada_fin rdf:resource="&untitled-ontology-6;ETSIInf"/>
+        <tiene_parada rdf:resource="&untitled-ontology-6;ETSIInf"/>
+        <tiene_horario rdf:resource="&untitled-ontology-6;Horario_Festivo:591"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#loc_ctr_carabanchel -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-6;loc_ctr_carabanchel">
+        <rdf:type rdf:resource="&untitled-ontology-6;localizacion"/>
+        <coordenadas>-1 58 58.64;43 19 15.74 </coordenadas>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#loc_etsiinf -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-6;loc_etsiinf">
+        <rdf:type rdf:resource="&untitled-ontology-6;localizacion"/>
+        <coordenadas>-1 58 58.64;43 19 15.74 </coordenadas>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#loca_centro_Empresas -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-6;loca_centro_Empresas">
+        <rdf:type rdf:resource="&untitled-ontology-6;localizacion"/>
+        <coordenadas>-1 58 58.64;43 19 15.74 </coordenadas>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#localizacion_aluche -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-6;localizacion_aluche">
+        <rdf:type rdf:resource="&untitled-ontology-6;localizacion"/>
+        <coordenadas>-1 58 58.64;43 19 15.74 </coordenadas>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miguel1/ontologies/2016/0/untitled-ontology-6#localizacion_av_poblados -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-6;localizacion_av_poblados">
+        <rdf:type rdf:resource="&untitled-ontology-6;localizacion"/>
+        <coordenadas>-1 58 58.64;43 19 15.74 </coordenadas>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
